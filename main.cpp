@@ -2,6 +2,8 @@
 
 using namespace std;
 
+string userName, userDob;
+
 int main()
 {
     cout << "Hello" << endl;
