@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int clearScreen()
+void clearScreen()
 {
     system("CLS");
 }
