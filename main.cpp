@@ -4,19 +4,22 @@
 #include <stdio.h>
 #include <conio.h>
 
+//Declaration namespace std
 using namespace std;
 
-//function clear screan
+//Function clear console screen
 void clearScreen()
 {
     system("CLS");
 }
 
-//function time on current system check at the bottom
+//Function time on current system check at the bottom!
 int timeSystem();
 
+//Variable
 string userName, userDob;
 
+//The main program
 int main()
 {
     clearScreen();
@@ -33,11 +36,11 @@ int main()
 
     cout << "Hello " << userName << endl;
 
-    timeSystem();
 
     return 0;
 }
 
+//Function time on current system check the top!!!
 int timeSystem()
 {
     while( true )
@@ -49,6 +52,7 @@ int timeSystem()
         char* dt = ctime(&now);
 
         cout << "The local date and time is: " << dt << endl;
+        cout << "Press enter to return to menu!!!" << endl;
 
         Sleep( 1000 );
 
@@ -59,7 +63,7 @@ int timeSystem()
 			key = _getch();
 
 		if( key == 13 ) //The ENTER key.
-			return main(); //Quit the while loop and return to function int main();
+			return main(); //Quit the while loop
 
 		else if( key != ' ' )
 		{
