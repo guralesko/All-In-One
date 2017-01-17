@@ -4,6 +4,18 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cout << "Hello" << endl;
+    cout << "What is your name :";
+    cin >> userName;
+
+    system("CLS");
+
+    cout << "What is your date of birth :";
+    cin >> userDob;
+
+    system("CLS");
+
+    cout << "Hello " << userName << endl;
+    
     return 0;
 }
