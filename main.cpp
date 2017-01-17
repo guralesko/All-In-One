@@ -2,6 +2,11 @@
 
 using namespace std;
 
+int clearScreen()
+{
+    system("CLS");
+}
+
 string userName, userDob;
 
 int main()
@@ -10,12 +15,12 @@ int main()
     cout << "What is your name :";
     cin >> userName;
 
-    system("CLS");
+    clearScreen();
 
     cout << "What is your date of birth :";
     cin >> userDob;
 
-    system("CLS");
+    clearScreen();
 
     cout << "Hello " << userName << endl;
     
