@@ -16,8 +16,14 @@ void clearScreen()
 //Function time on current system check at the bottom!
 int timeSystem();
 
-//Variable
+//Function Main Menu list check at the bottom!
+void mainMenu();
+
+//Variable about user
 string userName, userDob;
+
+//Variable main menu
+int choice;
 
 //The main program
 int main()
@@ -36,6 +42,8 @@ int main()
 
     cout << "Hello " << userName << endl;
 
+    //Function Main Menu
+    mainMenu();
 
     return 0;
 }
@@ -63,7 +71,7 @@ int timeSystem()
 			key = _getch();
 
 		if( key == 13 ) //The ENTER key.
-			return main(); //Quit the while loop
+			return main(); //Quit the while loop and return to main program
 
 		else if( key != ' ' )
 		{
@@ -74,4 +82,24 @@ int timeSystem()
 
         clearScreen();
     }
+}
+
+void mainMenu()
+{
+    cout << endl;
+    cout << "MAIN MENU" << endl;
+    cout << "---------------" << endl;
+    cout << "1." << endl;
+    cout << "2." << endl;
+    cout << "3." << endl;
+    cout << "4." << endl;
+    cout << "5." << endl;
+    cout << "---------------" << endl;
+    cout << "Wybierz: ";
+    cin >> choice;
+}
+
+void switchMainMenu()
+{
+    ;
 }
