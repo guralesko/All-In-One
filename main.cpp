@@ -3,9 +3,14 @@
 #include <ctime>
 #include <stdio.h>
 #include <conio.h>
+#include <cstdlib>
+
 
 //Declaration namespace std
 using namespace std;
+
+//Variable main menu
+int choice;
 
 //Function clear console screen
 void clearScreen()
@@ -13,17 +18,18 @@ void clearScreen()
     system("CLS");
 }
 
+
+
 //Function time on current system check at the bottom!
 int timeSystem();
 
 //Function Main Menu list check at the bottom!
 void mainMenu();
 
+
 //Variable about user
 string userName, userDob;
 
-//Variable main menu
-int choice;
 
 //The main program
 int main()
@@ -41,9 +47,11 @@ int main()
     clearScreen();
 
     cout << "Hello " << userName << endl;
+    Sleep( 2000 );
 
     //Function Main Menu
     mainMenu();
+
 
     return 0;
 }
@@ -53,6 +61,7 @@ int timeSystem()
 {
     while( true )
     {
+        clearScreen();
         //time on current system
         time_t now = time(0);
 
@@ -71,7 +80,7 @@ int timeSystem()
 			key = _getch();
 
 		if( key == 13 ) //The ENTER key.
-			return main(); //Quit the while loop and return to main program
+			mainMenu(); //Quit the while loop and return to main program
 
 		else if( key != ' ' )
 		{
@@ -84,22 +93,47 @@ int timeSystem()
     }
 }
 
+//Function Main Menu
 void mainMenu()
 {
+    clearScreen();
     cout << endl;
     cout << "MAIN MENU" << endl;
     cout << "---------------" << endl;
-    cout << "1." << endl;
+    cout << "1.Show time on current system " << endl;
     cout << "2." << endl;
     cout << "3." << endl;
     cout << "4." << endl;
-    cout << "5." << endl;
+    cout << "5.Exit" << endl;
     cout << "---------------" << endl;
-    cout << "Wybierz: ";
+    cout << "Choice: ";
     cin >> choice;
+
+    switch(choice)
+    {
+        case 1:
+           timeSystem();
+        break;
+
+        case 2:
+            mainMenu();
+        break;
+
+        case 3:
+            mainMenu();
+        break;
+
+        case 4:
+            mainMenu();
+        break;
+
+        case 5:
+            exit(0);
+        break;
+
+        default:
+            cout << "There is no choice";
+    }
 }
 
-void switchMainMenu()
-{
-    ;
-}
+
